@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ENGLISH 10 UNIT 1 - FAMILY LIFE - READING</title>
+<style>
+:root{
+ --ocean1:#e8f8ff; --ocean2:#d1f0ff; --ocean3:#9cddff; --ocean4:#2a9df4; --ocean5:#0b5cad;
+ --ink:#0f355a; --line:#b6e4ff; --card:#ffffffde; --shadow:0 12px 35px rgba(10,88,160,.12);
+ --good:#15a06b; --bad:#db5872; --gold:#ffb74d; --soft:#f7fcff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0; font-family:"Segoe UI",Arial,sans-serif; color:var(--ink);
+ background:
+ radial-gradient(circle at 8% 8%, rgba(94,206,255,.32), transparent 18%),
+ radial-gradient(circle at 94% 14%, rgba(42,157,244,.18), transparent 20%),
+ linear-gradient(180deg,#ecfbff 0%, #e5f7ff 22%, #d6f1ff 55%, #c7ebff 100%);
+ overflow-x:hidden;
+}
+.ocean-floor{position:fixed;left:0;right:0;bottom:0;height:92px;background:linear-gradient(180deg,transparent,#c0e7ff 28%,#95d7ff);opacity:.75;z-index:-1}
+.bubble{position:fixed;bottom:-20px;border-radius:50%;background:rgba(255,255,255,.45);z-index:-1;animation:rise linear infinite}
+.b1{left:6%;width:16px;height:16px;animation-duration:11s}
+.b2{left:19%;width:10px;height:10px;animation-duration:9s;animation-delay:2s}
+.b3{left:71%;width:14px;height:14px;animation-duration:12s;animation-delay:3s}
+.b4{left:86%;width:12px;height:12px;animation-duration:10s;animation-delay:1s}
+@keyframes rise{from{transform:translateY(0)}to{transform:translateY(-115vh)}}
+
+.swimmer{position:fixed;z-index:-1;font-size:34px;opacity:.74;filter:drop-shadow(0 4px 8px rgba(0,0,0,.08));white-space:nowrap}
+.fish1{top:14%; animation:swim1 22s linear infinite}
+.fish2{top:29%; animation:swim2 26s linear infinite}
+.fish3{top:48%; animation:swim1 28s linear infinite reverse}
+.fish4{top:68%; animation:swim2 24s linear infinite}
+.fish5{top:82%; animation:swim1 30s linear infinite}
+@keyframes swim1{from{left:-18%}to{left:108%}}
+@keyframes swim2{from{left:106%}to{left:-22%}}
+
+.wrap{width:min(1380px,96vw);margin:auto;padding:20px 0 70px}
+.hero{
+ background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(242,250,255,.96));
+ border:1px solid #caebff; border-radius:28px; box-shadow:var(--shadow);
+ padding:18px 22px; position:relative; overflow:hidden
+}
+.hero:before{content:"";position:absolute;inset:auto -80px -80px auto;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle, rgba(42,157,244,.18), transparent 68%)}
+.hero h1{margin:0;font-size:clamp(24px,4vw,38px);text-align:center;color:#0c5699}
+.sub{text-align:center;color:#4f7697;font-size:14px;margin-top:5px}
+.teacher{text-align:center;color:#456c8d;font-size:13px;margin-top:7px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:13px}
+.btn{border:1px solid #bfe2fb;background:white;color:#16548e;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;transition:.18s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 5px 15px rgba(13,92,173,.12);border-color:#76c8f7}
+.btn.primary{background:linear-gradient(135deg,#35a7ff,#0d72d6);border:0;color:white}
+.btn.warn{background:linear-gradient(135deg,#ffbf66,#ff9f43);border:0;color:white}
+.btn.danger{border-color:#f1c3ce;color:#bf4e63}
+
+.student{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}
+.field{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:15px;padding:12px;box-shadow:var(--shadow)}
+.field label{display:block;font-size:12px;color:#6288a8;margin-bottom:6px}
+.field input{width:100%;border:0;outline:none;background:transparent;font:inherit;color:var(--ink)}
+
+.stats{position:sticky;top:8px;z-index:30;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);
+border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:var(--shadow);margin-bottom:18px}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.stat{background:#f3fbff;border:1px solid #d5efff;border-radius:12px;padding:8px;text-align:center;font-size:11px;color:#6791af}
+.stat b{display:block;color:#0b61b4;font-size:15px;margin-top:2px}
+.progress{height:8px;background:#dff2ff;border-radius:999px;overflow:hidden;margin-top:8px}
+.progress div{height:100%;width:0;background:linear-gradient(90deg,#4ec5ff,#1b90f5,#0b5cad);transition:.35s}
+
+.section{margin:24px 0 34px}
+.section-head{background:linear-gradient(135deg,#e6f7ff,#f7fcff);border:1px solid #c9ebff;border-left:5px solid #2a9df4;
+border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);margin-bottom:14px}
+.section-head h2{margin:0;color:#0d5aa8;font-size:22px}
+.section-head p{margin:5px 0 0;color:#52789a;font-family:Georgia,serif;font-style:italic}
+
+.twocol{display:grid;grid-template-columns: 1.03fr 1fr; gap:18px; align-items:start}
+.panel{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.left-pane{position:sticky;top:118px}
+.panel-title{padding:14px 16px;border-bottom:1px solid #d8efff;background:linear-gradient(90deg,#edf9ff,#ffffff);font-weight:800;color:#0c5da9}
+.vocab-wrap{padding:14px 16px 8px}
+.vocab-note{font-size:13px;color:#52789a;margin-bottom:8px}
+.vocab-table{width:100%;border-collapse:collapse;font-size:14px;background:white}
+.vocab-table th,.vocab-table td{border:1px solid #d8eefc;padding:9px 10px;vertical-align:middle}
+.vocab-table th{background:#eaf8ff;color:#0d5aa8}
+.vocab-table td input{width:100%;border:1px dashed #8fd3ff;border-radius:8px;padding:8px;background:#fbfeff}
+.passage-box{padding:16px;line-height:1.82;font-size:17px;font-family:Georgia,"Times New Roman",serif;color:#163d62;max-height:74vh;overflow:auto}
+.passage-box p{margin:0 0 16px}
+.passage-box b.blank{color:#0d72d6}
+
+.questions{padding:14px}
+.qcard{background:#fbfeff;border:1px solid #d9efff;border-radius:18px;padding:15px 15px 12px;margin-bottom:14px;box-shadow:0 5px 14px rgba(13,92,173,.06)}
+.qcard.correct-card{border-color:#94d8b6}
+.qcard.wrong-card{border-color:#f2aab7}
+.qtop{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:9px}
+.qnum{background:#e8f6ff;color:#0d63b7;font-weight:900;padding:6px 10px;border-radius:10px;font-size:13px}
+.qstatus{font-size:12px;color:#7391aa}
+.qstem{font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.5;color:#183c5b}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}
+.option{width:100%;text-align:left;border:1px solid #cfe9fb;background:white;border-radius:12px;padding:11px 12px;
+font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.45;color:#173d62;cursor:pointer;min-height:52px}
+.option:hover{background:#f2fbff;border-color:#84cbf8}
+.option.correct{background:#eaf8ef;border-color:#91d7b2;color:#1b7447}
+.option.wrong{background:#fff1f3;border-color:#efb1bc;color:#ad3f53}
+.option:disabled{cursor:default}
+.feedback,.explain{display:none;margin-top:11px;border-radius:12px;padding:12px 13px;line-height:1.6}
+.feedback.show,.explain.show{display:block}
+.feedback.ok{background:#eaf8ef;border:1px solid #a9dec1;color:#1c7748}
+.feedback.bad{background:#fff0f3;border:1px solid #efbdc6;color:#b04357}
+.explain{background:#f8fdff;border:1px solid #d5eefc;color:#1b456a}
+.explain h4{margin:2px 0 7px;color:#0c63b6}
+.explain .block{background:white;border:1px solid #def0fc;border-radius:11px;padding:10px 11px;margin-top:8px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.footer-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:18px 0 0}
+.note{margin-top:16px;background:#eefaff;border:1px solid #cbeefe;border-radius:14px;padding:12px 14px;color:#4c7190;font-size:14px}
+.shake{animation:shake .28s}
+@keyframes shake{25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+.confetti{position:fixed;top:-18px;width:8px;height:14px;z-index:999;pointer-events:none;animation:fall 1.1s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:.34}}
+
+.modal{position:fixed;inset:0;background:rgba(4,45,83,.45);display:none;place-items:center;z-index:1000;padding:18px}
+.modal.show{display:grid}
+.modalbox{width:min(760px,96vw);max-height:88vh;overflow:auto;background:white;border-radius:20px;padding:22px;box-shadow:0 18px 45px rgba(0,0,0,.16)}
+.modalbox h3{margin-top:0;color:#0d5da9}
+.review{border:1px solid #d7ecfb;border-radius:11px;padding:10px;margin:8px 0;background:#fbfeff}
+
+@media(max-width:980px){
+  .twocol{grid-template-columns:1fr}
+  .left-pane{position:relative;top:auto}
+  .passage-box{max-height:none}
+}
+@media(max-width:760px){
+  .student{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .options{grid-template-columns:1fr}
+  .qstem{font-size:18px}
+  .option{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{
+ body{background:white}
+ .swimmer,.bubble,.ocean-floor,.stats,.controls,.actions,.footer-actions{display:none!important}
+ .wrap{width:100%;padding:0}
+ .hero,.panel,.qcard{box-shadow:none;break-inside:avoid}
+ .feedback,.explain{display:block!important}
+}
+</style>
+</head>
+<body>
+<div class="swimmer fish1">🐠 🐟 🐠 🐡</div>
+<div class="swimmer fish2">🐬 🐟 🐠</div>
+<div class="swimmer fish3">🐢 🐠 🐟 🦀</div>
+<div class="swimmer fish4">🐡 🐠 🐬</div>
+<div class="swimmer fish5">🐟 🐠 🐢</div>
+<div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div><div class="bubble b4"></div>
+<div class="ocean-floor"></div>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>ENGLISH 10 UNIT 1 – FAMILY LIFE – READING</h1>
+    <div class="sub">Ocean Reading Zone • Split-screen practice like a real paper-based test but more engaging</div>
+    <div class="teacher">Created by: <b>Ms Tuyet Mai FTU</b> • Contact: <b>0365 423 820</b></div>
+    <div class="controls">
+      <button class="btn" id="soundBtn">🔊 Âm thanh</button>
+      <button class="btn" id="printBtn">🖨 In bài</button>
+      <button class="btn danger" id="resetBtn">↻ Làm lại toàn bộ</button>
+    </div>
+  </header>
+
+  <div class="student">
+    <div class="field"><label for="name">Họ và tên học sinh</label><input id="name" placeholder="Nhập họ và tên"></div>
+    <div class="field"><label for="className">Lớp</label><input id="className" placeholder="Ví dụ: 10A1"></div>
+  </div>
+
+  <div class="stats">
+    <div class="stats-grid">
+      <div class="stat">Tổng số câu<b id="total">23</b></div>
+      <div class="stat">Đã làm<b id="done">0</b></div>
+      <div class="stat">Chưa làm<b id="left">23</b></div>
+      <div class="stat">Đúng lần đầu<b id="right">0</b></div>
+      <div class="stat">Tỉ lệ đúng<b id="acc">0%</b></div>
+    </div>
+    <div class="progress"><div id="bar"></div></div>
+  </div>
+
+  <div id="sections"></div>
+
+  <div class="footer-actions">
+    <button class="btn" id="unansweredBtn">↪ Tới câu chưa làm đầu tiên</button>
+    <button class="btn" id="mistakesBtn">⚠ Xem các câu sai</button>
+    <button class="btn primary" id="submitBtn">NỘP BÀI & XEM KẾT QUẢ</button>
+  </div>
+
+  <div class="note">
+    <b>Lưu ý:</b> File này chỉ tách riêng phần <b>READING</b> từ dữ liệu bạn cung cấp, giữ nguyên dạng bài gốc: 
+    <b>E9 (reading cloze)</b>, <b>E10</b> và <b>E11 (reading comprehension)</b>. 
+    Trước mỗi bài đọc đều có list từ B2+ để học sinh tự tra và tự điền nghĩa.
+  </div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modalbox">
+    <button class="btn" id="closeModal" style="float:right">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+const sections = [{"code": "E9", "title": "E9: Read the following passage and mark the letter A, B, C, or D to indicate the correct word or phrase that best fits each of the numbered blanks.", "subtitle": "Reading cloze", "vocab": ["unequal share", "contribute", "average", "estimated", "division of labour", "majority", "percentage", "anxious", "inequality", "loss of respect", "depression", "thankless", "unfulfilling"], "passage": "\n<p>A recent study shows that an unequal share of household chores is still the norm in many households, (1) ______ the fact that many more women now have jobs. In a survey of 1,256 people (2) ______ between 18 and 65, men said they contributed an average of 37 per cent of the total housework, while the women (3) ______ their share to be nearly double that, at 70 per cent. This ratio was not affected by (4) ______ the woman was working or not.</p>\n\n<p>When they were asked what they thought was a fair division of labour, women with jobs felt that housework should (5) ______ shared equally between male and female partners. Women who did not work outside the home were satisfied to perform 80 per cent – the majority of housework – if their husbands did the (6) ______. Research has shown that if levels increase beyond these percentages, women become unhappy and anxious, and feel they are (7) ______.</p>\n\n<p>After marriage, a woman is reported to increase her household workload (8) ______ 14 hours per week, but for men (9) ______ amount is just 90 minutes. So the division of labour becomes unbalanced, (10) ______ the man's share increases much less than the woman's. It is the inequality and (11) ______ of respect, not the actual number of hours, which leads to (12) ______ and depression. The research even (13) ______ housework as thankless and unfulfilling.</p>\n", "questions": [{"qno": 1, "stem": "Question 1", "options": ["in spite", "despite", "although", "even"], "correct": 1, "translation": "Một nghiên cứu gần đây cho thấy việc chia sẻ công việc nhà không công bằng vẫn là điều phổ biến trong nhiều gia đình, mặc cho thực tế là ngày nay có nhiều phụ nữ đi làm hơn.", "analysis": {"A": "in spite: cụm giới từ nghĩa là “mặc dù”, nhưng thường dùng <i>in spite of</i>, không đứng một mình trước <i>the fact that</i> trong dạng đề này.", "B": "despite: giới từ nghĩa là “mặc dù/bất chấp”. Cấu trúc đúng là <i>despite the fact that + clause</i>.", "C": "although: liên từ nghĩa là “mặc dù”, theo sau trực tiếp là một mệnh đề, không đi tự nhiên với <i>the fact that</i> ở đây.", "D": "even: chỉ là trạng từ/liên từ bổ trợ, không thể đứng một mình để tạo nghĩa đối lập hoàn chỉnh."}, "why": "Chọn <b>B. despite</b> vì sau chỗ trống là cụm <i>the fact that many more women now have jobs</i>. Cấu trúc chuẩn là <b>despite the fact that + mệnh đề</b>.", "extra": "Dấu hiệu then chốt: <i>the fact that</i> → ưu tiên <b>despite</b>."}, {"qno": 2, "stem": "Question 2", "options": ["aged", "aging", "age", "ages"], "correct": 0, "translation": "Trong một cuộc khảo sát với 1.256 người ở độ tuổi từ 18 đến 65,...", "analysis": {"A": "aged: tính từ/phân từ dùng sau danh từ để chỉ “ở độ tuổi...”, ví dụ <i>people aged between 18 and 65</i>.", "B": "aging: đang già đi/lão hóa, không phù hợp nghĩa trong câu.", "C": "age: danh từ/động từ, không thể đặt trực tiếp sau <i>people</i> theo cấu trúc này.", "D": "ages: danh từ số nhiều, không phù hợp sau <i>people</i>."}, "why": "Chọn <b>A. aged</b> vì cụm đúng là <b>people aged between 18 and 65</b> = những người ở độ tuổi từ 18 đến 65.", "extra": "Đây là dạng rút gọn tính từ sau danh từ: <i>people who are aged...</i> → <i>people aged...</i>."}, {"qno": 3, "stem": "Question 3", "options": ["guessed", "judged", "estimated", "valued"], "correct": 2, "translation": "Nam giới nói rằng họ đóng góp trung bình 37% tổng số việc nhà, trong khi phụ nữ ước tính phần việc của mình gần như gấp đôi, ở mức 70%.", "analysis": {"A": "guessed: đoán, thường nhấn mạnh sự phỏng đoán thiếu cơ sở.", "B": "judged: đánh giá, phán đoán; dùng được trong vài ngữ cảnh nhưng không tự nhiên bằng với số liệu thống kê.", "C": "estimated: ước tính, dùng rất phù hợp với số liệu/tỉ lệ phần trăm.", "D": "valued: coi trọng/đánh giá cao; không phù hợp nghĩa trong câu."}, "why": "Chọn <b>C. estimated</b> vì câu đang nói đến <i>their share</i> cùng với con số <i>70 per cent</i>; động từ phù hợp nhất với việc đưa ra con số ước tính là <b>estimate</b>.", "extra": "Từ khóa: có dữ liệu phần trăm → thường đi với <i>estimate</i>."}, {"qno": 4, "stem": "Question 4", "options": ["what", "whether", "which", "that"], "correct": 1, "translation": "Tỉ lệ này không bị ảnh hưởng bởi việc người phụ nữ có đi làm hay không.", "analysis": {"A": "what: đại từ nghi vấn, không dùng với cặp lựa chọn <i>... or not</i>.", "B": "whether: liên từ dùng để diễn tả “liệu ... hay không”, rất phù hợp với mẫu <i>whether ... or not</i>.", "C": "which: dùng để lựa chọn trong số các đối tượng, không hợp ở đây.", "D": "that: liên từ nối mệnh đề, nhưng không kết hợp với <i>or not</i> theo nghĩa này."}, "why": "Chọn <b>B. whether</b> vì cấu trúc chuẩn là <b>whether + clause + or not</b>.", "extra": "Hễ thấy <i>or not</i> → nghĩ ngay đến <b>whether</b>."}, {"qno": 5, "stem": "Question 5", "options": ["being", "been", "to be", "be"], "correct": 3, "translation": "Những phụ nữ có công việc cho rằng việc nhà nên được chia đều giữa nam và nữ.", "analysis": {"A": "being: V-ing, không dùng sau động từ khuyết thiếu <i>should</i> trong câu bị động này.", "B": "been: quá khứ phân từ, cần có trợ động từ <i>have/has/had</i> hoặc <i>be</i> đi kèm.", "C": "to be: động từ nguyên mẫu có <i>to</i>, không đứng sau <i>should</i>.", "D": "be: động từ nguyên mẫu không <i>to</i>, phù hợp sau <i>should</i> trong câu bị động <i>should be shared</i>."}, "why": "Chọn <b>D. be</b> vì sau <b>should</b> phải là động từ nguyên mẫu. Cụm đúng là <b>should be shared</b> (nên được chia sẻ).", "extra": "Công thức: <b>modal verb + be + Vp2</b> để tạo bị động."}, {"qno": 6, "stem": "Question 6", "options": ["remaining", "remain", "remainder", "remained"], "correct": 2, "translation": "Những phụ nữ không làm việc bên ngoài gia đình sẵn sàng làm 80% công việc nhà – phần lớn việc nhà – nếu chồng họ làm phần còn lại.", "analysis": {"A": "remaining: còn lại, thường là tính từ/phân từ; ở đây cần một danh từ sau <i>the</i>.", "B": "remain: động từ “còn lại”, không phù hợp sau mạo từ <i>the</i>.", "C": "remainder: danh từ nghĩa là “phần còn lại”, phù hợp trong cụm <i>do the remainder</i>.", "D": "remained: quá khứ của động từ <i>remain</i>, không phù hợp cấu trúc."}, "why": "Chọn <b>C. remainder</b> vì sau <i>the</i> cần một danh từ. <b>the remainder</b> nghĩa là “phần còn lại”.", "extra": "Mẹo nhanh: <i>the + noun</i> → loại các đáp án là động từ."}, {"qno": 7, "stem": "Question 7", "options": ["essential", "slight", "worthy", "unimportant"], "correct": 3, "translation": "Nghiên cứu cho thấy nếu mức độ việc nhà vượt quá các tỉ lệ này, phụ nữ sẽ trở nên không vui và lo lắng, và cảm thấy mình không quan trọng.", "analysis": {"A": "essential: thiết yếu, rất quan trọng; trái ngược với cảm xúc tiêu cực ở câu.", "B": "slight: nhỏ, nhẹ; không hợp với cấu trúc <i>feel they are ...</i> theo nghĩa tâm lý ở đây.", "C": "worthy: xứng đáng/đáng giá; mang nghĩa tích cực.", "D": "unimportant: không quan trọng, đúng với tâm trạng tiêu cực được mô tả."}, "why": "Chọn <b>D. unimportant</b> vì câu trước đã nêu họ <i>become unhappy and anxious</i>, do đó cảm giác tiếp nối hợp lý là thấy mình <b>không được coi trọng / không quan trọng</b>.", "extra": "Dựa vào mạch nghĩa tiêu cực của câu để loại các phương án mang nghĩa tích cực."}, {"qno": 8, "stem": "Question 8", "options": ["by", "to", "at", "in"], "correct": 0, "translation": "Sau khi kết hôn, một phụ nữ được cho là tăng khối lượng việc nhà lên thêm 14 giờ mỗi tuần,...", "analysis": {"A": "by: dùng để chỉ mức tăng/giảm chênh lệch, ví dụ <i>increase by 14 hours</i>.", "B": "to: dùng khi nói tăng lên tới một mốc cuối cùng.", "C": "at: chỉ vị trí/thời điểm/mức độ, không phù hợp.", "D": "in: không dùng để diễn tả mức tăng trong cấu trúc này."}, "why": "Chọn <b>A. by</b> vì câu mô tả <b>mức tăng thêm</b> là 14 giờ/tuần, không phải tăng lên tới 14 giờ.", "extra": "Phân biệt: <b>increase by + amount</b> / <b>increase to + final number</b>."}, {"qno": 9, "stem": "Question 9", "options": ["a", "an", "the", "some"], "correct": 2, "translation": "... nhưng đối với nam giới thì con số đó chỉ là 90 phút.", "analysis": {"A": "a: mạo từ không xác định, không hợp vì đang nhắc đến một lượng cụ thể đã xác định.", "B": "an: dùng trước nguyên âm, nhưng vẫn không phù hợp về nghĩa xác định.", "C": "the: mạo từ xác định, dùng để chỉ “con số đó/ lượng đó”.", "D": "some: một vài/một lượng nào đó, không hợp với danh từ số ít xác định."}, "why": "Chọn <b>C. the</b> vì cụm đúng là <b>the amount</b>, chỉ lượng thời gian cụ thể đang được nhắc tới trong ngữ cảnh.", "extra": "Khi người nói và người đọc đều biết đối tượng nào đang được nhắc đến, dùng <b>the</b>."}, {"qno": 10, "stem": "Question 10", "options": ["as", "so", "but", "then"], "correct": 0, "translation": "Vì thế sự phân chia lao động trở nên mất cân bằng, bởi vì phần việc của người đàn ông tăng ít hơn nhiều so với phần việc của người phụ nữ.", "analysis": {"A": "as: ở đây mang nghĩa “vì/bởi vì”, nối nguyên nhân rất phù hợp.", "B": "so: nghĩa là “vì vậy”, thiên về kết quả hơn là giải thích nguyên nhân cho mệnh đề trước.", "C": "but: nhưng, biểu thị đối lập; không hợp logic câu.", "D": "then: sau đó, chỉ trình tự thời gian, không phù hợp."}, "why": "Chọn <b>A. as</b> vì phần sau đang <b>giải thích nguyên nhân</b> tại sao sự phân chia lao động trở nên mất cân bằng.", "extra": "Ở văn viết, <b>as = because</b> có thể dùng để nêu lý do."}, {"qno": 11, "stem": "Question 11", "options": ["waste", "loss", "disadvantage", "death"], "correct": 1, "translation": "Chính sự bất bình đẳng và sự thiếu hụt/mất đi sự tôn trọng, chứ không phải số giờ thực tế, dẫn tới lo âu và trầm cảm.", "analysis": {"A": "waste: sự lãng phí; không đi tự nhiên với <i>of respect</i>.", "B": "loss: sự mất mát/thiếu hụt; <i>loss of respect</i> là cụm tự nhiên.", "C": "disadvantage: bất lợi, không kết hợp tự nhiên như vậy.", "D": "death: cái chết, hoàn toàn sai nghĩa."}, "why": "Chọn <b>B. loss</b> vì cụm collocation đúng là <b>loss of respect</b>.", "extra": "Hãy để ý các kết hợp từ cố định: <b>loss of respect</b>."}, {"qno": 12, "stem": "Question 12", "options": ["anxiety", "anxious", "anxiously", "anxiousness"], "correct": 0, "translation": "Chính điều đó dẫn tới lo âu và trầm cảm.", "analysis": {"A": "anxiety: danh từ “sự lo âu”, rất phù hợp sau <i>lead to</i> và song song với <i>depression</i>.", "B": "anxious: tính từ “lo lắng”, sai từ loại.", "C": "anxiously: trạng từ “một cách lo lắng”, sai từ loại.", "D": "anxiousness: dạng danh từ có tồn tại nhưng ít tự nhiên hơn nhiều so với <i>anxiety</i> trong collocation này."}, "why": "Chọn <b>A. anxiety</b> vì sau <i>lead to</i> cần danh từ; đồng thời câu ghép với <i>depression</i> là một danh từ.", "extra": "Khi hai từ nối bằng <i>and</i>, hãy ưu tiên cùng từ loại."}, {"qno": 13, "stem": "Question 13", "options": ["draws", "expresses", "reports", "describes"], "correct": 3, "translation": "Nghiên cứu thậm chí còn mô tả công việc nhà là vô ơn và không mang lại sự thỏa mãn.", "analysis": {"A": "draws: vẽ/kéo; không đi với cấu trúc <i>... as ...</i> trong nghĩa này.", "B": "expresses: bày tỏ, diễn đạt; không phù hợp với tân ngữ là <i>housework</i>.", "C": "reports: báo cáo/tường thuật; ít tự nhiên hơn với cấu trúc đánh giá tính chất sự vật ở đây.", "D": "describes: mô tả; cấu trúc rất phù hợp là <i>describe something as + adjective</i>."}, "why": "Chọn <b>D. describes</b> vì cấu trúc chuẩn là <b>describe A as B</b> = mô tả A là B.", "extra": "Ghi nhớ collocation: <b>describe something as + adj/noun</b>."}]}, {"code": "E10", "title": "E10: Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the correct answer to each of the questions.", "subtitle": "Reading comprehension", "vocab": ["industrialized", "nuclear family", "single-parent family", "blended family", "divorced", "widowed", "remarries", "extended family", "complex families", "generations", "relatives", "family units"], "passage": "\n<p>Family types vary in different countries and among different cultures. In Western, industrialized societies, the nuclear family ranks as the most common family type. It consists of a father, a mother and their children. But nuclear families exist together with many other types of family units. In the single-parent family, for example, a mother or a father heads the family alone. A <i><b>blended</b></i> family is formed when a divorced or widowed parent remarries. As divorce rates have risen, the number of single-parent and blended families has increased.</p>\n\n<p>In many parts of the world, parents and children live together with other family members under the same roof. These complex families usually contain several generations of family members, including grandparents, parents and children. They may also include brothers or sisters and their families, uncles, aunts and cousins. Even when relatives do not live together, they still consider themselves members of the same extended family includes grandparents, uncles, aunts and cousins.</p>\n", "questions": [{"qno": 1, "stem": "Question 1: The nuclear family ranks as the most common family type ________.", "options": ["in many industrialized countries", "in countries with nuclear weapons", "that consists of more than two generations", "that leads to the divorce of parents"], "correct": 0, "translation": "Gia đình hạt nhân được xếp là kiểu gia đình phổ biến nhất ở nhiều nước công nghiệp hóa.", "analysis": {"A": "in many industrialized countries: phù hợp với câu trong bài <i>In Western, industrialized societies...</i>.", "B": "in countries with nuclear weapons: hiểu sai từ <i>nuclear</i>; trong bài nói về loại hình gia đình, không phải vũ khí hạt nhân.", "C": "that consists of more than two generations: mô tả gia đình mở rộng/phức hợp chứ không phải gia đình hạt nhân.", "D": "that leads to the divorce of parents: hoàn toàn không có trong bài."}, "why": "Chọn <b>A</b> vì đoạn đầu nêu rõ: <i>In Western, industrialized societies, the nuclear family ranks as the most common family type.</i>", "extra": "Từ khóa trong bài: <b>Western, industrialized societies</b>."}, {"qno": 2, "stem": "Question 2: In the single-parent family, ________.", "options": ["there are often no children", "only one parent lives with his or her child or children", "the number of blended children has increased", "children live with their grandparents"], "correct": 1, "translation": "Trong gia đình đơn thân, chỉ có một phụ huynh sống cùng con hoặc các con của mình.", "analysis": {"A": "there are often no children: sai hoàn toàn vì đã gọi là family và bài nêu rõ có con.", "B": "only one parent lives with his or her child or children: đúng với câu <i>a mother or a father heads the family alone</i>.", "C": "the number of blended children has increased: bài nói số lượng gia đình đơn thân và gia đình tái hôn tăng lên, không nói “blended children”.", "D": "children live with their grandparents: đó không phải định nghĩa của single-parent family."}, "why": "Chọn <b>B</b> vì đoạn văn giải thích trực tiếp: <i>In the single-parent family, ... a mother or a father heads the family alone.</i>", "extra": "Mẹo đọc hiểu: nhiều câu hỏi định nghĩa có đáp án nằm nguyên văn trong bài."}, {"qno": 3, "stem": "Question 3: Grandparents, parents and children are mentioned as ________.", "options": ["the three typical generations of an extended family", "three branches of a family tree", "the closest and happiest relatives in family units", "a complex combination"], "correct": 0, "translation": "Ông bà, cha mẹ và con cái được nhắc đến như ba thế hệ điển hình của một gia đình mở rộng.", "analysis": {"A": "the three typical generations of an extended family: khớp với câu <i>These complex families usually contain several generations... including grandparents, parents and children.</i>", "B": "three branches of a family tree: bài không dùng ý “nhánh cây gia phả”.", "C": "the closest and happiest relatives in family units: bài không bàn đến mức độ hạnh phúc/gần gũi.", "D": "a complex combination: quá mơ hồ và không đúng trọng tâm."}, "why": "Chọn <b>A</b> vì đoạn hai nêu rõ các gia đình phức hợp/gia đình mở rộng thường có <b>nhiều thế hệ</b>, bao gồm ông bà, cha mẹ và con cái.", "extra": "Từ khóa: <b>several generations</b>."}, {"qno": 4, "stem": "Question 4: The second paragraph is about ________.", "options": ["American culture", "relatives and family members", "the relationship between family members", "the extended family"], "correct": 3, "translation": "Đoạn thứ hai nói về gia đình mở rộng.", "analysis": {"A": "American culture: không phải trọng tâm đoạn văn.", "B": "relatives and family members: quá chung, chưa khái quát đúng ý chính.", "C": "the relationship between family members: bài không tập trung vào mối quan hệ mà vào cấu trúc loại hình gia đình.", "D": "the extended family: đúng vì toàn đoạn giải thích gia đình nhiều thế hệ, gồm ông bà, cô dì chú bác, anh chị em họ..."}, "why": "Chọn <b>D</b> vì đoạn hai mô tả đặc điểm của kiểu gia đình có nhiều thế hệ và nhiều họ hàng cùng/thuộc một gia đình lớn.", "extra": "Câu hỏi main idea → nhìn toàn đoạn, không chỉ 1 câu."}, {"qno": 5, "stem": "Question 5: The word “blended” in paragraph 1 is closest in meaning to ________.", "options": ["complex", "married", "mixed", "formed"], "correct": 2, "translation": "Từ “blended” ở đoạn 1 gần nghĩa nhất với “pha trộn/kết hợp”.", "analysis": {"A": "complex: phức tạp; không sát nghĩa nhất với blended.", "B": "married: đã kết hôn; không phải nghĩa của từ cần tìm.", "C": "mixed: pha trộn/kết hợp; phù hợp nhất với <i>blended family</i> = gia đình tái hợp từ hai gia đình trước đó.", "D": "formed: được hình thành; gần về ngữ cảnh nhưng không phải từ đồng nghĩa trực tiếp nhất."}, "why": "Chọn <b>C</b> vì <b>blended family</b> là gia đình được tạo nên từ sự kết hợp giữa các thành viên của những cuộc hôn nhân/gia đình trước đó, nên <i>mixed</i> là gần nghĩa nhất.", "extra": "Kỹ năng từ vựng trong ngữ cảnh: nhìn cách từ được giải thích ngay sau nó trong bài."}]}, {"code": "E11", "title": "E11: Read the following passage and mark the letter A, B, C, or D on your answer sheet to indicate the correct answer to each of the questions.", "subtitle": "Reading comprehension", "vocab": ["ordinary", "relationships", "encourage", "connected", "company", "accomplishments", "disappointments", "extracurricular activities", "traditions", "routines", "rituals", "set aside", "responsibilities", "contribution"], "passage": "\n<h3 style=\"text-align:center;margin:8px 0 12px;color:#0d4fa3\">Building positive family relationships</h3>\n\n<p>The ordinary, everyday things that families do together can help build strong relationships with teenagers. Regular family meals are a great chance for everyone to chat about their day, or about interesting things that are going on or coming up. If parents encourage everyone to have a say, no one will feel they’re being put on the spot to talk. Also, many families find that meals are more enjoyable when the TV isn’t turned on!</p>\n\n<p>We should all take turns choosing outdoor activities for our families. A relaxing holiday or weekend away together as a family can also build togetherness.</p>\n\n<p>One-on-one time with the child gives the parents the chance to stay connected and enjoy each other’s company. It can also be a chance to share thoughts and feelings.</p>\n\n<p>Parents should celebrate the child’s accomplishments, share his disappointments, and show interest in his hobbies. Sometimes it’s just a matter of showing up to watch the child play sport or music, or giving him a lift to extracurricular activities.</p>\n\n<p>Family traditions, routines and rituals can help parents and their children set aside regular dates and special times. For example, we might have a movie night together, a favourite meal or cooking session on a particular night, a family games afternoon or an evening walk together.</p>\n\n<p>Agreed household responsibilities give kids of all ages the sense that they’re making an important contribution to family life. These could be things like chores, shopping or helping older or younger members of the family.</p>\n", "questions": [{"qno": 1, "stem": "Question 1: Regular family meals are a great chance for everyone ________.", "options": ["to have an opportunity share their daily activities", "to talk about TV programmes during the meal", "to have the spot to talk about", "to talk about interesting things that are coming soon"], "correct": 3, "translation": "Những bữa ăn gia đình thường xuyên là cơ hội tuyệt vời để mọi người trò chuyện về những điều thú vị đang diễn ra hoặc sắp diễn ra.", "analysis": {"A": "to have an opportunity share their daily activities: diễn đạt chưa chuẩn ngữ pháp và chỉ phản ánh một phần ý “chat about their day”.", "B": "to talk about TV programmes during the meal: trái với bài vì bài còn nói bữa ăn vui hơn khi TV không bật.", "C": "to have the spot to talk about: diễn đạt không tự nhiên và sai nghĩa.", "D": "to talk about interesting things that are coming soon: khớp với ý trong bài <i>interesting things that are going on or coming up</i>."}, "why": "Chọn <b>D</b> vì đáp án này bám sát trực tiếp chi tiết trong đoạn 1: <i>interesting things that are going on or coming up</i>.", "extra": "Khi 2 đáp án có vẻ gần nghĩa, ưu tiên đáp án bám sát câu trong bài và đúng ngữ pháp hơn."}, {"qno": 2, "stem": "Question 2: The following things are true about outdoor activities for our families EXCEPT ____.", "options": ["all family members try to find out suitable activities", "they should be held on holidays or at weekends", "they offer a chance to share secret thoughts and feelings", "they offer the pleasant feeling of being united"], "correct": 2, "translation": "Những điều sau đây đúng về hoạt động ngoài trời cho gia đình, NGOẠI TRỪ việc chúng tạo cơ hội để chia sẻ những suy nghĩ và cảm xúc thầm kín.", "analysis": {"A": "all family members try to find out suitable activities: phù hợp với câu <i>We should all take turns choosing outdoor activities</i>.", "B": "they should be held on holidays or at weekends: phù hợp với chi tiết <i>a relaxing holiday or weekend away</i>.", "C": "they offer a chance to share secret thoughts and feelings: chi tiết này thuộc phần <i>one-on-one time with the child</i>, không phải hoạt động ngoài trời.", "D": "they offer the pleasant feeling of being united: phù hợp với ý <i>build togetherness</i>."}, "why": "Chọn <b>C</b> vì việc chia sẻ suy nghĩ và cảm xúc thuộc phần thời gian riêng giữa cha mẹ và con, không phải đặc điểm của hoạt động ngoài trời.", "extra": "Câu EXCEPT: hãy tìm 3 ý có trong bài và 1 ý bị đặt sai chỗ/ngữ cảnh."}, {"qno": 3, "stem": "Question 3: Parents can show their attention to their child by all these things EXCEPT ________.", "options": ["watching the child play sport or music", "giving him a lift to extracurricular activities", "having a movie night together", "setting aside regular dates to do housework"], "correct": 3, "translation": "Cha mẹ có thể thể hiện sự quan tâm tới con bằng tất cả những việc sau, NGOẠI TRỪ việc dành những dịp cố định để làm việc nhà.", "analysis": {"A": "watching the child play sport or music: có trong bài, là một cách thể hiện sự quan tâm đến sở thích của con.", "B": "giving him a lift to extracurricular activities: có trong bài, là một ví dụ cụ thể.", "C": "having a movie night together: có trong bài như một hoạt động gia đình tích cực.", "D": "setting aside regular dates to do housework: bài nói <i>set aside regular dates and special times</i> cho truyền thống/sinh hoạt gia đình, không phải “để làm việc nhà”."}, "why": "Chọn <b>D</b> vì đáp án này bóp méo chi tiết gốc. Bài không nói “dành ngày cố định để làm việc nhà” như một cách cha mẹ thể hiện sự quan tâm.", "extra": "Hãy cảnh giác với đáp án lấy từ khóa trong bài nhưng đổi nội dung cốt lõi."}, {"qno": 4, "stem": "Question 4: Children who share household chores with their parents will ________.", "options": ["enjoy each other’s company", "make the family life better", "be given a chance to do extracurricular activities", "have a family games afternoon or an evening walk together"], "correct": 1, "translation": "Những đứa trẻ cùng chia sẻ việc nhà với cha mẹ sẽ góp phần làm cho cuộc sống gia đình tốt đẹp hơn.", "analysis": {"A": "enjoy each other’s company: thuộc phần one-on-one time, không phải kết quả trực tiếp của việc chia sẻ việc nhà.", "B": "make the family life better: đúng với ý <i>making an important contribution to family life</i>.", "C": "be given a chance to do extracurricular activities: không phải ý được nêu.", "D": "have a family games afternoon or an evening walk together: thuộc phần truyền thống/thời gian đặc biệt, không phải hệ quả của chores."}, "why": "Chọn <b>B</b> vì đoạn cuối nói việc chia sẻ trách nhiệm trong nhà giúp trẻ cảm thấy mình đang có <b>đóng góp quan trọng</b> cho đời sống gia đình.", "extra": "Paraphrase cần nhận ra: <i>make an important contribution to family life</i> ≈ <b>make the family life better</b>."}, {"qno": 5, "stem": "Question 5: The main idea of the passage is ________.", "options": ["to give advice on staying connected and enjoying each other’s company", "how to share household chores between family members", "to offer pieces of advice to improve family relationships", "the important role of family traditions, routines and rituals"], "correct": 2, "translation": "Ý chính của bài là đưa ra những lời khuyên để cải thiện các mối quan hệ trong gia đình.", "analysis": {"A": "to give advice on staying connected and enjoying each other’s company: chỉ đúng với một phần nhỏ của bài.", "B": "how to share household chores between family members: quá hẹp, chỉ là ý ở đoạn cuối.", "C": "to offer pieces of advice to improve family relationships: bao quát toàn bộ các đoạn của bài, phù hợp nhất với nhan đề <i>Building positive family relationships</i>.", "D": "the important role of family traditions, routines and rituals: cũng chỉ là một phần, không phải toàn bài."}, "why": "Chọn <b>C</b> vì toàn bộ bài đưa ra nhiều gợi ý khác nhau để xây dựng mối quan hệ gia đình tích cực: bữa ăn chung, hoạt động ngoài trời, thời gian riêng, quan tâm sở thích, truyền thống gia đình và chia sẻ trách nhiệm.", "extra": "Để tìm main idea, hãy nhìn tiêu đề và xem các đoạn nhỏ đều phục vụ cho ý chung nào."}]}];
+const allQuestions = sections.flatMap(s => s.questions.map(q => ({...q, sectionCode:s.code, sectionTitle:s.title})));
+const STORAGE_KEY = "family_life_reading_ocean_v1";
+let state = {
+  sound:true,
+  answers:{},
+  first:{},
+  retries:{},
+  vocabInputs:{},
+  name:"",
+  className:""
+};
+
+const $ = id => document.getElementById(id);
+
+function save(){
+  state.name = $("name").value;
+  state.className = $("className").value;
+  document.querySelectorAll("[data-vocab]").forEach(inp => {
+    state.vocabInputs[inp.dataset.vocab] = inp.value;
+  });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+function load(){
+  try{
+    const old = JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");
+    if(old && confirm("Bạn có muốn tiếp tục bài reading đang làm không?")) state = {...state, ...old};
+    else if(old) localStorage.removeItem(STORAGE_KEY);
+  }catch(e){}
+  $("name").value = state.name || "";
+  $("className").value = state.className || "";
+}
+function stats(){
+  const attempted = Object.keys(state.first).length;
+  const right = Object.values(state.first).filter(x=>x.correct).length;
+  $("done").textContent = attempted;
+  $("left").textContent = allQuestions.length - attempted;
+  $("right").textContent = right;
+  $("acc").textContent = attempted ? Math.round(right/attempted*100) + "%" : "0%";
+  $("bar").style.width = (attempted/allQuestions.length*100) + "%";
+}
+
+function play(ok=true){
+  if(!state.sound) return;
+  try {
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    const ctx = new Ctx();
+    const gain = ctx.createGain();
+    gain.connect(ctx.destination);
+    gain.gain.setValueAtTime(.0001, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(.1, ctx.currentTime + .01);
+    const notes = ok ? [760, 980] : [420, 330, 240];
+    notes.forEach((f, i) => {
+      const osc = ctx.createOscillator();
+      osc.type = ok ? "sine" : "triangle";
+      osc.frequency.value = f;
+      osc.connect(gain);
+      const st = ctx.currentTime + i * (ok ? .08 : .11);
+      osc.start(st);
+      osc.stop(st + .12);
+    });
+    gain.gain.exponentialRampToValueAtTime(.0001, ctx.currentTime + .45);
+    setTimeout(()=>ctx.close(), 650);
+  } catch(e) {}
+}
+function confetti(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  for(let i=0;i<26;i++){
+    const d=document.createElement("i");
+    d.className="confetti";
+    d.style.left=Math.random()*100+"vw";
+    d.style.background=["#35a7ff","#0d72d6","#ffb74d","#2ec4b6"][i%4];
+    d.style.animationDelay=Math.random()*.18+"s";
+    document.body.appendChild(d);
+    setTimeout(()=>d.remove(),1400);
+  }
+}
+
+function vocabKey(sectionCode, idx){
+  return sectionCode + "_vocab_" + idx;
+}
+
+function renderSection(section){
+  const vocabRows = section.vocab.map((w, idx) => {
+    const key = vocabKey(section.code, idx);
+    const val = state.vocabInputs[key] || "";
+    return `<tr>
+      <td><b>${idx+1}.</b> ${w}</td>
+      <td><input data-vocab="${key}" value="${val.replace(/"/g,'&quot;')}" placeholder="Học sinh tự tra và điền nghĩa"></td>
+    </tr>`;
+  }).join("");
+
+  const qhtml = section.questions.map(q => {
+    const qid = section.code + "_" + q.qno;
+    return `<article class="qcard" id="card-${qid}">
+      <div class="qtop">
+        <div class="qnum">${section.code} - Question ${q.qno}</div>
+        <div class="qstatus" id="status-${qid}">Chưa làm</div>
+      </div>
+      <div class="qstem">${q.stem}</div>
+      <div class="options">
+        ${q.options.map((opt, i) => `<button class="option" data-qid="${qid}" data-sec="${section.code}" data-qno="${q.qno}" data-opt="${i}">
+          <b>${'ABCD'[i]}.</b> ${opt}
+        </button>`).join("")}
+      </div>
+      <div class="feedback" id="fb-${qid}"></div>
+      <div class="explain" id="ex-${qid}"></div>
+      <div class="actions">
+        <button class="btn" id="retry-${qid}" data-retry="${qid}" style="display:none">↻ Làm lại câu này</button>
+      </div>
+    </article>`;
+  }).join("");
+
+  return `<section class="section" id="${section.code}">
+    <div class="section-head">
+      <h2>${section.code}</h2>
+      <p>${section.title}</p>
+    </div>
+    <div class="twocol">
+      <div class="panel left-pane">
+        <div class="panel-title">📘 B2+ Vocabulary before reading</div>
+        <div class="vocab-wrap">
+          <div class="vocab-note">Bên trái là từ/cụm từ nâng cao. Bên phải để trống để học sinh tự tra và tự điền nghĩa.</div>
+          <table class="vocab-table">
+            <thead><tr><th style="width:42%">Từ / Cụm từ</th><th>Nghĩa (HS tự điền)</th></tr></thead>
+            <tbody>${vocabRows}</tbody>
+          </table>
+        </div>
+        <div class="panel-title">📖 Passage</div>
+        <div class="passage-box">${section.passage}</div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">📝 Questions & detailed explanations</div>
+        <div class="questions">${qhtml}</div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderAll(){
+  $("sections").innerHTML = sections.map(renderSection).join("");
+  document.querySelectorAll(".option").forEach(btn => btn.addEventListener("click", () => selectOption(btn)));
+  document.querySelectorAll("[data-retry]").forEach(btn => btn.addEventListener("click", () => retryQuestion(btn.dataset.retry)));
+  document.querySelectorAll("[data-vocab]").forEach(inp => inp.addEventListener("input", save));
+  restorePrevious();
+  stats();
+}
+
+function findQuestion(sectionCode, qno){
+  return sections.find(s=>s.code===sectionCode).questions.find(q=>q.qno===qno);
+}
+
+function selectOption(btn){
+  const sectionCode = btn.dataset.sec;
+  const qno = Number(btn.dataset.qno);
+  const qid = btn.dataset.qid;
+  const chosen = Number(btn.dataset.opt);
+  const q = findQuestion(sectionCode, qno);
+
+  state.answers[qid] = chosen;
+  if(!state.first[qid]) state.first[qid] = {correct: chosen === q.correct, answer: chosen, sectionCode, qno};
+  showResult(sectionCode, q, qid, chosen, false);
+  stats();
+  save();
+}
+
+function explainHTML(q){
+  return `<h4>PHẦN GIẢI THÍCH CHI TIẾT</h4>
+    <div class="block">
+      <b>1. Phân tích từ vựng 4 đáp án:</b><br>
+      <b>A.</b> ${q.analysis.A}<br>
+      <b>B.</b> ${q.analysis.B}<br>
+      <b>C.</b> ${q.analysis.C}<br>
+      <b>D.</b> ${q.analysis.D}
+    </div>
+    <div class="block">
+      <b>2. Dịch nghĩa toàn câu / ý hỏi:</b><br>
+      "${q.translation}"
+    </div>
+    <div class="block">
+      <b>3. Tại sao chọn ${'ABCD'[q.correct]}?</b><br>
+      ${q.why}
+    </div>
+    <div class="block">
+      <b>4. Ghi nhớ / căn cứ trong bài:</b><br>
+      ${q.extra}
+    </div>`;
+}
+
+function showResult(sectionCode, q, qid, chosen, restoring){
+  const card = document.getElementById("card-" + qid);
+  const options = card.querySelectorAll(".option");
+  options.forEach((b, idx) => {
+    b.disabled = true;
+    b.classList.remove("correct", "wrong");
+    if(idx === q.correct) b.classList.add("correct");
+    if(idx === chosen && chosen !== q.correct) b.classList.add("wrong");
+  });
+
+  const ok = chosen === q.correct;
+  card.classList.toggle("correct-card", ok);
+  card.classList.toggle("wrong-card", !ok);
+
+  const fb = document.getElementById("fb-" + qid);
+  fb.className = "feedback show " + (ok ? "ok" : "bad");
+  fb.innerHTML = ok
+    ? "<b>✓ Chính xác!</b> Em đang bám rất sát cách làm bài reading trên giấy."
+    : "<b>✕ Chưa chính xác.</b> Đáp án đúng đã được tô xanh. Hãy đọc kỹ phần phân tích 4 đáp án bên dưới.";
+
+  const ex = document.getElementById("ex-" + qid);
+  ex.className = "explain show";
+  ex.innerHTML = explainHTML(q);
+
+  const st = document.getElementById("status-" + qid);
+  st.textContent = state.first[qid]?.correct ? "Đúng lần đầu" : "Sai lần đầu";
+  st.style.color = state.first[qid]?.correct ? "#178558" : "#c24b62";
+
+  document.getElementById("retry-" + qid).style.display = "inline-block";
+
+  if(!restoring){
+    play(ok);
+    if(ok) confetti();
+    else {
+      card.classList.add("shake");
+      setTimeout(()=>card.classList.remove("shake"), 320);
+    }
+  }
+  state.retries[qid] = 0;
+}
+
+function restorePrevious(){
+  document.querySelectorAll("[data-vocab]").forEach(inp => {
+    const key = inp.dataset.vocab;
+    if(state.vocabInputs[key]) inp.value = state.vocabInputs[key];
+  });
+  Object.entries(state.first).forEach(([qid, info]) => {
+    const q = findQuestion(info.sectionCode, info.qno);
+    const chosen = state.answers[qid] ?? info.answer;
+    showResult(info.sectionCode, q, qid, chosen, true);
+  });
+}
+
+function retryQuestion(qid){
+  const card = document.getElementById("card-" + qid);
+  card.querySelectorAll(".option").forEach(btn => {
+    btn.disabled = false;
+    btn.classList.remove("correct", "wrong");
+  });
+  document.getElementById("fb-" + qid).className = "feedback";
+  document.getElementById("ex-" + qid).className = "explain";
+  document.getElementById("retry-" + qid).style.display = "none";
+  card.classList.remove("correct-card", "wrong-card");
+  state.retries[qid] = (state.retries[qid] || 0) + 1;
+  save();
+}
+
+function firstUnanswered(){
+  const unanswered = allQuestions.find(q => !state.first[q.sectionCode + "_" + q.qno]);
+  if(!unanswered){
+    showModal("<h3>🎉 Hoàn thành</h3><p>Bạn đã làm đủ toàn bộ phần Reading rồi nhé.</p>");
+    return;
+  }
+  const id = unanswered.sectionCode + "_" + unanswered.qno;
+  document.getElementById("card-" + id).scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+function mistakes(){
+  const wrongs = Object.entries(state.first).filter(([k,v]) => !v.correct);
+  if(!wrongs.length){
+    showModal("<h3>✅ Câu sai</h3><p>Hiện chưa có câu nào sai ở lần làm đầu tiên.</p>");
+    return;
+  }
+  showModal("<h3>⚠ CÁC CÂU SAI LẦN ĐẦU</h3>" + wrongs.map(([qid, info]) => {
+    const q = findQuestion(info.sectionCode, info.qno);
+    return `<div class="review">
+      <b>${info.sectionCode} - Question ${info.qno}</b><br>
+      ${q.stem}<br>
+      <span style="color:#bb4860">Bài làm: <b>${'ABCD'[info.answer]}. ${q.options[info.answer]}</b></span><br>
+      <span style="color:#157b4e">Đáp án đúng: <b>${'ABCD'[q.correct]}. ${q.options[q.correct]}</b></span>
+    </div>`;
+  }).join(""));
+}
+
+function submitWork(){
+  const attempted = Object.keys(state.first).length;
+  const left = allQuestions.length - attempted;
+  if(left && !confirm(`Bạn còn ${left} câu chưa làm. Vẫn nộp bài?`)) return;
+  const right = Object.values(state.first).filter(x=>x.correct).length;
+  const pct = attempted ? Math.round(right/attempted*100) : 0;
+  const bySection = sections.map(s => {
+    const total = s.questions.length;
+    const correct = s.questions.filter(q => state.first[s.code + "_" + q.qno]?.correct).length;
+    return `<div class="review"><b>${s.code}</b>: ${correct} / ${total}</div>`;
+  }).join("");
+  const comment = pct >= 90 ? "Con làm rất tốt! Khả năng đọc hiểu và chọn đáp án đang rất chắc."
+    : pct >= 70 ? "Con làm khá tốt! Hãy xem lại những câu sai để tăng độ chính xác."
+    : pct >= 50 ? "Con đã có cố gắng! Hãy đọc kỹ phần giải thích 4 đáp án sau mỗi câu."
+    : "Không sao đâu! Reading cần luyện từng bước. Cứ làm lại, đối chiếu phân tích, con sẽ tiến bộ nhanh.";
+  showModal(`<h3>🏆 KẾT QUẢ PHẦN READING</h3>
+    <p><b>${$("name").value || "Học sinh"}</b> • ${$("className").value || "Chưa nhập lớp"}</p>
+    ${bySection}
+    <div class="review">Đúng lần đầu: <b>${right} / ${attempted || allQuestions.length}</b> • ${pct}%</div>
+    <p><b>${comment}</b></p>`);
+  confetti();
+  play(true);
+  save();
+}
+
+function showModal(html){
+  $("modalContent").innerHTML = html;
+  $("modal").classList.add("show");
+}
+
+$("soundBtn").addEventListener("click", ()=>{
+  state.sound = !state.sound;
+  $("soundBtn").textContent = state.sound ? "🔊 Âm thanh" : "🔇 Âm thanh";
+  save();
+});
+$("printBtn").addEventListener("click", ()=>window.print());
+$("resetBtn").addEventListener("click", ()=>{
+  if(confirm("Bạn có chắc muốn xóa toàn bộ tiến độ phần Reading và làm lại từ đầu?")){
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  }
+});
+$("unansweredBtn").addEventListener("click", firstUnanswered);
+$("mistakesBtn").addEventListener("click", mistakes);
+$("submitBtn").addEventListener("click", submitWork);
+$("closeModal").addEventListener("click", ()=> $("modal").classList.remove("show"));
+$("modal").addEventListener("click", e => { if(e.target === $("modal")) $("modal").classList.remove("show"); });
+$("name").addEventListener("input", save);
+$("className").addEventListener("input", save);
+
+load();
+$("soundBtn").textContent = state.sound ? "🔊 Âm thanh" : "🔇 Âm thanh";
+renderAll();
+</script>
+</body>
+</html>
