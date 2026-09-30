@@ -10,7 +10,7 @@
  --ink:#0f355a; --line:#b6e4ff; --card:#ffffffde; --shadow:0 12px 35px rgba(10,88,160,.12);
  --good:#15a06b; --bad:#db5872; --gold:#ffb74d; --soft:#f7fcff;
 }
-*{box-sizing:border-box}
+*{box-sizing:border-box;max-width:100%}
 html{scroll-behavior:smooth}
 body{
  margin:0; font-family:"Segoe UI",Arial,sans-serif; color:var(--ink);
@@ -37,7 +37,7 @@ body{
 @keyframes swim1{from{left:-18%}to{left:108%}}
 @keyframes swim2{from{left:106%}to{left:-22%}}
 
-.wrap{width:min(1380px,96vw);margin:auto;padding:20px 0 70px}
+.wrap{width:min(1440px,98vw);margin:auto;padding:20px 0 70px}
 .hero{
  background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(242,250,255,.96));
  border:1px solid #caebff; border-radius:28px; box-shadow:var(--shadow);
@@ -73,31 +73,31 @@ border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);margin-bottom:14px
 .section-head h2{margin:0;color:#0d5aa8;font-size:22px}
 .section-head p{margin:5px 0 0;color:#52789a;font-family:Georgia,serif;font-style:italic}
 
-.twocol{display:grid;grid-template-columns: 1.03fr 1fr; gap:18px; align-items:start}
-.panel{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
-.left-pane{position:sticky;top:118px}
-.panel-title{padding:14px 16px;border-bottom:1px solid #d8efff;background:linear-gradient(90deg,#edf9ff,#ffffff);font-weight:800;color:#0c5da9}
+.twocol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:stretch;width:100%}
+.panel{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);min-width:0;overflow-x:hidden}
+.left-pane,.right-pane{height:76vh;min-height:560px;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.panel-title{padding:14px 16px;border-bottom:1px solid #d8efff;background:linear-gradient(90deg,#edf9ff,#ffffff);font-weight:800;color:#0c5da9;position:sticky;top:0;z-index:8}
 .vocab-wrap{padding:14px 16px 8px}
 .vocab-note{font-size:13px;color:#52789a;margin-bottom:8px}
-.vocab-table{width:100%;border-collapse:collapse;font-size:14px;background:white}
-.vocab-table th,.vocab-table td{border:1px solid #d8eefc;padding:9px 10px;vertical-align:middle}
+.vocab-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:14px;background:white}
+.vocab-table th,.vocab-table td{border:1px solid #d8eefc;padding:9px 10px;vertical-align:middle;overflow-wrap:anywhere}
 .vocab-table th{background:#eaf8ff;color:#0d5aa8}
-.vocab-table td input{width:100%;border:1px dashed #8fd3ff;border-radius:8px;padding:8px;background:#fbfeff}
-.passage-box{padding:16px;line-height:1.82;font-size:17px;font-family:Georgia,"Times New Roman",serif;color:#163d62;max-height:74vh;overflow:auto}
+.vocab-table td input{width:100%;min-width:0;border:1px dashed #8fd3ff;border-radius:8px;padding:8px;background:#fbfeff}
+.passage-box{padding:16px 18px 22px;line-height:1.78;font-size:17px;font-family:Georgia,"Times New Roman",serif;color:#163d62;overflow:visible;overflow-wrap:anywhere}
 .passage-box p{margin:0 0 16px}
 .passage-box b.blank{color:#0d72d6}
 
-.questions{padding:14px}
+.questions{padding:14px 14px 22px;min-width:0}
 .qcard{background:#fbfeff;border:1px solid #d9efff;border-radius:18px;padding:15px 15px 12px;margin-bottom:14px;box-shadow:0 5px 14px rgba(13,92,173,.06)}
 .qcard.correct-card{border-color:#94d8b6}
 .qcard.wrong-card{border-color:#f2aab7}
 .qtop{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:9px}
 .qnum{background:#e8f6ff;color:#0d63b7;font-weight:900;padding:6px 10px;border-radius:10px;font-size:13px}
 .qstatus{font-size:12px;color:#7391aa}
-.qstem{font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.5;color:#183c5b}
+.qstem{font-family:Georgia,"Times New Roman",serif;font-size:19px;line-height:1.5;color:#183c5b;overflow-wrap:anywhere}
 .options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}
-.option{width:100%;text-align:left;border:1px solid #cfe9fb;background:white;border-radius:12px;padding:11px 12px;
-font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.45;color:#173d62;cursor:pointer;min-height:52px}
+.option{width:100%;min-width:0;text-align:left;border:1px solid #cfe9fb;background:white;border-radius:12px;padding:11px 12px;
+font-family:Georgia,"Times New Roman",serif;font-size:17px;line-height:1.45;color:#173d62;cursor:pointer;min-height:52px;overflow-wrap:anywhere}
 .option:hover{background:#f2fbff;border-color:#84cbf8}
 .option.correct{background:#eaf8ef;border-color:#91d7b2;color:#1b7447}
 .option.wrong{background:#fff1f3;border-color:#efb1bc;color:#ad3f53}
@@ -123,10 +123,17 @@ font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.45;colo
 .modalbox h3{margin-top:0;color:#0d5da9}
 .review{border:1px solid #d7ecfb;border-radius:11px;padding:10px;margin:8px 0;background:#fbfeff}
 
-@media(max-width:980px){
+@media(max-width:820px){
   .twocol{grid-template-columns:1fr}
-  .left-pane{position:relative;top:auto}
-  .passage-box{max-height:none}
+  .left-pane,.right-pane{height:auto;min-height:0;overflow:visible}
+  .panel-title{position:relative;top:auto}
+  .passage-box{overflow:visible}
+}
+@media(min-width:821px) and (max-width:1120px){
+  .options{grid-template-columns:1fr}
+  .qstem{font-size:18px}
+  .option{font-size:17px}
+  .vocab-table{font-size:13px}
 }
 @media(max-width:760px){
   .student{grid-template-columns:1fr}
@@ -336,7 +343,7 @@ function renderSection(section){
         <div class="panel-title">📖 Passage</div>
         <div class="passage-box">${section.passage}</div>
       </div>
-      <div class="panel">
+      <div class="panel right-pane">
         <div class="panel-title">📝 Questions & detailed explanations</div>
         <div class="questions">${qhtml}</div>
       </div>
